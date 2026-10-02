@@ -1,0 +1,28 @@
+<svg viewBox="0 0 120 120" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="docBg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#185abd" offset="0%" />
+      <stop stop-color="#0e3a8c" offset="100%" />
+    </linearGradient>
+    <linearGradient id="wGrad" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8" offset="0%" />
+      <stop stop-color="#2563eb" offset="100%" />
+    </linearGradient>
+    <linearGradient id="flap" x1="75" y1="0" x2="110" y2="35" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60a5fa" offset="0%" />
+      <stop stop-color="#3b82f6" offset="100%" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Document base with folded corner -->
+  <path d="M 20 8 L 75 8 L 108 41 L 108 104 A 8 8 0 0 1 100 112 L 20 112 A 8 8 0 0 1 12 104 L 12 16 A 8 8 0 0 1 20 8 Z" fill="url(#docBg)" filter="url(#shadow)" />
+  
+  <!-- Folded Flap -->
+  <polygon points="75,8 75,41 108,41" fill="url(#flap)" />
+
+  <!-- Modern "W" Icon in Center -->
+  <path d="M 28 42 L 40 86 L 52 54 L 64 86 L 76 54 L 88 86 L 96 42 L 84 42 L 78 72 L 67 44 L 57 44 L 46 72 L 40 42 Z" fill="#ffffff" opacity="0.96" />
+</svg>

@@ -1,0 +1,20 @@
+{
+  "name": "react-word-viewer-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "postinstall": "npm run build:packages",
+    "build:packages": "npm run build --workspace=react-word-viewer",
+    "dev:docs": "npm run dev --workspace=docs",
+    "dev:playground": "npm run dev --workspace=playground",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "dependencies": {
+    "pdf-tools": "file:../pdf-tools"
+  }
+}
