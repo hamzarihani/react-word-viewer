@@ -21,6 +21,7 @@ function App() {
     if (file) {
       handleFileUpload(file);
     }
+    e.target.value = '';
   };
 
   const handleDragOver = (e: DragEvent<HTMLDivElement>) => {
@@ -151,12 +152,14 @@ function App() {
               <div className="viewer-controls">
                 <div className="lang-switcher">
                   <button
+                    type="button"
                     className={`lang-btn ${locale === 'en' ? 'active' : ''}`}
                     onClick={() => setLocale('en')}
                   >
                     English
                   </button>
                   <button
+                    type="button"
                     className={`lang-btn ${locale === 'ar' ? 'active' : ''}`}
                     onClick={() => setLocale('ar')}
                   >
@@ -171,7 +174,7 @@ function App() {
                     onChange={handleInputChange}
                   />
                 </label>
-                <button onClick={() => setDocUrl(null)} className="btn btn-sm btn-close">
+                <button type="button" onClick={() => setDocUrl(null)} className="btn btn-sm btn-close">
                   Close
                 </button>
               </div>
